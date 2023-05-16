@@ -1,10 +1,7 @@
 'use strict';
  // Get the modal
  var modal = document.getElementById("myModal");
-    
- // Get the button that opens the modal
  var btn = document.getElementById("myBtn");
-
  var span = document.getElementsByClassName("close")[0];
  btn.onclick = function() {
    modal.style.display = "block";
@@ -17,6 +14,25 @@
      modal.style.display = "none";
    }
  }
+ //Add Quantity
+ function increaseCount(a, b) {
+  var input = b.previousElementSibling;
+  var value = parseInt(input.value, 10); 
+  value = isNaN(value)? 0 : value;
+  value ++;
+  input.value = value;
+}
+function decreaseCount(a, b) {
+  var input = b.nextElementSibling;
+  var value = parseInt(input.value, 10); 
+  if (value > 1) {
+    value = isNaN(value)? 0 : value;
+    value --;
+    input.value = value;
+  }
+}
+
+
 // mobile menu variables
 const mobileMenuOpenBtn = document.querySelectorAll('[data-mobile-menu-open-btn]');
 const mobileMenu = document.querySelectorAll('[data-mobile-menu]');
