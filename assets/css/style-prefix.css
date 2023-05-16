@@ -3646,7 +3646,7 @@ footer {
 }
 
 /* Quantity in Modal Products */
-.modal .title .flex-col .counter {
+.flex-col .counter {
   width: 25%;
   margin: 0px;
   display: flex;
